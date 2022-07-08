@@ -1,94 +1,82 @@
-#include "BinaryTree.hpp"
+#include "Hash.hpp"
+#include <fstream>
+
+void sendEmail(std::ifstream &inputFile, std::ofstream &outputFile, Hash_BT *hash) {
+    std::string word, emailMessage;
+    int userKey, emailKey, messageSize;
+
+    inputFile >> userKey;
+    inputFile >> emailKey;
+    inputFile >> messageSize;
+
+    for (int i = 0; i < messageSize; i++) {
+        inputFile >> word;
+        emailMessage += word;
+        emailMessage += " ";
+    }
+    emailMessage.pop_back(); // removes the last space
+
+    Email email = Email(emailKey, emailMessage); // creates the email to insert in the hash table
+
+    int pos = hash->insert(userKey, email);
+
+    outputFile << "OK: MENSAGEM " << emailKey << " PARA " << userKey << " ARMAZENADA EM " << pos << std::endl;
+}
+
+void consultEmail(std::ifstream &inputFile, std::ofstream &outputFile, Hash_BT *hash) {
+    int userKey, emailKey;
+
+    inputFile >> userKey;
+    inputFile >> emailKey;
+
+    Email email = hash->search(userKey, emailKey);
+
+    if (email.getMessage().empty())
+        outputFile << "CONSULTA " << userKey << " " << emailKey << ": MENSAGEM INEXISTENTE" << std::endl;
+    else
+        outputFile << "CONSULTA " << userKey << " " << emailKey << ": " << email.getMessage() << std::endl;
+}
+
+void removeEmail(std::ifstream &inputFile, std::ofstream &outputFile, Hash_BT *hash) {
+    int userKey, emailKey;
+
+    inputFile >> userKey;
+    inputFile >> emailKey;
+
+    if (hash->remove(userKey, emailKey))
+        outputFile << "OK: MENSAGEM APAGADA" << std::endl;
+    else 
+        outputFile << "ERRO: MENSAGEM INEXISTENTE" << std::endl;
+}
+
+void readInputFile(std::ifstream &inputFile, std::ofstream &outputFile) {
+    int intAux;
+    std::string strAux;
+    inputFile >> intAux;
+    Hash_BT *hash = new Hash_BT(intAux);
+
+    while (inputFile.good()) {
+        inputFile >> strAux;
+        if (strAux == "ENTREGA")
+            sendEmail(inputFile, outputFile, hash);
+        if (strAux == "CONSULTA")
+            consultEmail(inputFile, outputFile, hash);
+        if (strAux == "APAGA")
+            removeEmail(inputFile, outputFile, hash);
+    }
+}
 
 int main(int argc, char const *argv[]) {
-    BinaryTree tree = BinaryTree();
 
-    Email email1 = Email(1, "SAAAAAALVE RAPAZIADA!!");
-    Email email2 = Email(2, "EAEEE");
-    Email email3 = Email(3, "TRANQUILO");
-    Email email4 = Email(4, "SAAAAAALVE RAPAZIADA!!");
-    Email email5 = Email(5, "SAAAAAALVE RAPAZIADA!!");
-    Email email6 = Email(6, "SAAAAAALVE RAPAZIADA!!");
-    Email email7 = Email(7, "SAAAAAALVE RAPAZIADA!!");
-    Email email8 = Email(8, "SAAAAAALVE RAPAZIADA!!");
-    Email email9 = Email(9, "SAAAAAALVE RAPAZIADA!!");
-    Email email10 = Email(10, "SAAAAAALVE RAPAZIADA!!");
+    std::ifstream inputFile("entrada.txt");
+    std::ofstream outputFile("saida.txt");
 
-
-    tree.insert(email7);
-    tree.insert(email4);
-    tree.insert(email5);
-    tree.insert(email1);
-    tree.insert(email8);
-    tree.insert(email10);
-    tree.insert(email9);
-    tree.insert(email6);
-    tree.insert(email2);
-    tree.insert(email3);
-
-    std::cout << "--------- Test Insert ----------" <<std::endl;
-    tree.printInOrder();
-
-    std::cout << std::endl;
-    std::cout << "--------- Test Search ----------" <<std::endl;
-
-    tree.search(1).print();
-    tree.search(2).print();
-    tree.search(3).print();
-    tree.search(4).print();
-    tree.search(5).print();
-    tree.search(6).print();
-    tree.search(7).print();
-    tree.search(8).print();
-    tree.search(9).print();
-    tree.search(10).print();
-
-    std::cout << std::endl;
-    std::cout << "--------- Test Remove ----------" << std::endl;
-    std::cout << "--------- 1 Remove ----------" << std::endl;
-    tree.remove(1);
-    tree.printInOrder();
-
-    std::cout << "--------- 2 Remove ----------" << std::endl;
-    tree.remove(2);
-    tree.printInOrder();
-
-    std::cout << "--------- 3 Remove ----------" << std::endl;
-    tree.remove(3);
-    tree.printInOrder();
-
-    std::cout << "--------- 4 Remove ----------" << std::endl;
-    tree.remove(4);
-    tree.printInOrder();
-
-    std::cout << "--------- 5 Remove ----------" << std::endl;
-    tree.remove(5);
-    tree.printInOrder();
-
-    std::cout << "--------- 6 Remove ----------" << std::endl;
-    tree.remove(6);
-    tree.printInOrder();
-
-    std::cout << "--------- 7 Remove ----------" << std::endl;
-    tree.remove(7);
-    tree.printInOrder();
-
-    std::cout << "--------- 8 Remove ----------" << std::endl;
-    tree.remove(8);
-    tree.printInOrder();
-
-    std::cout << "--------- 9 Remove ----------" << std::endl;
-    tree.remove(9);
-    tree.printInOrder();
-
-    std::cout << "--------- 10 Remove ----------" << std::endl;
-    tree.remove(10);
-    tree.printInOrder();
-
-
-
-
-
+    if (inputFile.is_open() && outputFile.is_open()) {
+        readInputFile(inputFile, outputFile);
+    } else {
+        erroAssert(inputFile.is_open(), "Could not open the Input File.");
+        erroAssert(outputFile.is_open(), "Could not open the output file.");
+    }
 
     return 0;
 }

@@ -3,6 +3,7 @@
 
 #include <string>
 #include <iostream>
+#include "msgassert.hpp"
 
 class Email {
     public:

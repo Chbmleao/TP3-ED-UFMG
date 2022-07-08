@@ -1,5 +1,4 @@
 #include "BinaryTree.hpp"
-#include "msgassert.hpp"
 
 BinaryTree::BinaryTree() {
     this->root = NULL;
@@ -68,15 +67,16 @@ Email BinaryTree::searchRecursive(Node* currentNode, int key) {
         return currentNode->email;
 }
 
-void BinaryTree::remove(int key) {
+bool BinaryTree::remove(int key) {
     return this->removeRecursive(this->root, key);
 }
 
-void BinaryTree::removeRecursive(Node* &currentNode, int key) {
+bool BinaryTree::removeRecursive(Node* &currentNode, int key) {
     Node *aux;
 
     if (currentNode == NULL) {
         avisoAssert(currentNode == NULL, "Email does not exist");
+        return false;
     }
     if (key < currentNode->email.getKey())
         return removeRecursive(currentNode->left, key);
@@ -95,6 +95,7 @@ void BinaryTree::removeRecursive(Node* &currentNode, int key) {
         }
         else
             this->previous(currentNode, currentNode->left);
+        return true;
     }
 }
 
