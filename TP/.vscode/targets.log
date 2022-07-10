@@ -6,7 +6,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Fri Jul  8 14:22:12 2022
+# Make data base, printed on Sun Jul 10 16:07:48 2022
 
 # Variables
 
@@ -15,7 +15,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # automatic
 ?F = $(notdir $?)
 # environment
-WSLENV = VSCODE_WSL_EXT_LOCATION/up:VSCODE_SERVER_TAR/up
+WSLENV = VSCODE_WSL_EXT_LOCATION/up
 # default
 .SHELLFLAGS := -c
 # makefile (from 'Makefile', line 38)
@@ -61,9 +61,7 @@ LSCOLORS = Gxfxcxdxbxegedabagacad
 # environment
 ELECTRON_RUN_AS_NODE = 1
 # environment
-VSCODE_IPC_HOOK_CLI = /tmp/vscode-ipc-924faa78-5d14-4bf6-a58c-1f369f67dbf7.sock
-# environment
-VSCODE_SERVER_TAR = /mnt/c/Users/Micro/AppData/Local/Temp/vscode-remote-wsl/92d25e35d9bf1a6b16f7d0758f25d48ace11e5b9/vscode-server-stable-linux-x64.tar.gz
+VSCODE_IPC_HOOK_CLI = /tmp/vscode-ipc-9bce4b75-ae0c-475e-aa82-1d02e0266816.sock
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
 # environment
@@ -77,7 +75,7 @@ PWD = /home/carlos/TPS/TP3/TP
 # default
 .LOADED := 
 # environment
-WSL_INTEROP = /run/WSL/154_interop
+WSL_INTEROP = /run/WSL/509_interop
 # environment
 VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
 # environment
@@ -171,7 +169,7 @@ TERM = xterm-256color
 # environment
 WSL_DISTRO_NAME = Ubuntu-20.04
 # variable set hash-table stats:
-# Load=80/1024=8%, Rehash=0, Collisions=9/124=7%
+# Load=79/1024=8%, Rehash=0, Collisions=9/123=7%
 
 # Pattern-specific Variable Values
 
@@ -179,11 +177,11 @@ WSL_DISTRO_NAME = Ubuntu-20.04
 
 # Directories
 
-# . (device 2064, inode 57183): 9 files, no impossibilities.
+# . (device 2064, inode 57183): 11 files, no impossibilities.
 # ./src (device 2064, inode 93606): 8 files, no impossibilities.
 # src (device 2064, inode 93606): 8 files, no impossibilities.
 
-# 25 files, no impossibilities in 3 directories.
+# 27 files, no impossibilities in 3 directories.
 
 # Implicit Rules
 
@@ -223,9 +221,27 @@ perf: bin//tp3.exe
 obj/Main.o: src/Main.cpp
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'Main'
-#  Last modified 2022-07-06 19:20:12.3889645
+#  Last modified 2022-07-08 16:38:26.4816409
 #  File has been updated.
-#  Successfully updated.
+#  Needs to be updated (-q is set).
+# automatic
+# @ := obj/Main.o
+# automatic
+# % := 
+# automatic
+# * := Main
+# automatic
+# + := src/Main.cpp
+# automatic
+# | := 
+# automatic
+# < := src/Main.cpp
+# automatic
+# ^ := src/Main.cpp
+# automatic
+# ? := src/Main.cpp
+# variable set hash-table stats:
+# Load=8/32=25%, Rehash=0, Collisions=1/16=6%
 #  recipe to execute (from 'Makefile', line 63):
 	$(CC) $(CXXFLAGS) -c $< -o $@ -I$(INCLUDE_FOLDER)
 
@@ -261,6 +277,7 @@ build: obj/memlog.o obj/Main.o obj/Hash.o obj/Node.o obj/BinaryTree.o obj/Email.
 #  File has been updated.
 #  Needs to be updated (-q is set).
 # variable set hash-table stats:
+ 
 # Load=0/32=0%, Rehash=0, Collisions=0/6=0%
 #  recipe to execute (from 'Makefile', line 60):
 	$(CC) $(CXXFLAGS) -o $(BIN_FOLDER)$(TARGET) $(OBJ)
@@ -271,14 +288,6 @@ obj/Node.o:
 #  Modification time never checked.
 #  File has not been updated.
 
-# Not a target:
-src/Hash.cpp:
-#  Implicit rule search has been done.
-#  Last modified 2022-07-08 14:21:57.8916409
-#  File has been updated.
-#  Successfully updated.
-
- 
 mem: bin//tp3.exe
 #  Implicit rule search has not been done.
 #  Modification time never checked.
@@ -295,7 +304,7 @@ mem: bin//tp3.exe
 # Not a target:
 src/Main.cpp:
 #  Implicit rule search has been done.
-#  Last modified 2022-07-06 19:20:04.8789645
+#  Last modified 2022-07-08 17:26:53.7516409
 #  File has been updated.
 #  Successfully updated.
 
@@ -321,47 +330,26 @@ obj/memlog.o: src/memlog.cpp
 #  recipe to execute (from 'Makefile', line 63):
 	$(CC) $(CXXFLAGS) -c $< -o $@ -I$(INCLUDE_FOLDER)
 
-obj/Hash.o: src/Hash.cpp
-#  Implicit rule search has been done.
-#  Implicit/static pattern stem: 'Hash'
-#  File does not exist.
-#  File has been updated.
-#  Needs to be updated (-q is set).
-# automatic
-# @ := obj/Hash.o
-# automatic
-# % := 
-# automatic
-# * := Hash
-# automatic
-# + := src/Hash.cpp
-# automatic
-# | := 
-# automatic
-# < := src/Hash.cpp
-# automatic
-# ^ := src/Hash.cpp
-# automatic
-# ? := src/Hash.cpp
-# variable set hash-table stats:
-# Load=8/32=25%, Rehash=0, Collisions=1/16=6%
-#  recipe to execute (from 'Makefile', line 63):
-	$(CC) $(CXXFLAGS) -c $< -o $@ -I$(INCLUDE_FOLDER)
+# Not a target:
+obj/Hash.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # files hash-table stats:
-# Load=18/1024=2%, Rehash=0, Collisions=0/51=0%
+# Load=17/1024=2%, Rehash=0, Collisions=0/47=0%
 # VPATH Search Paths
 
 # No 'vpath' search paths.
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 40 / storage = 358 B / avg = 8 B
-# current buf: size = 8162 B / used = 358 B / count = 40 / avg = 8 B
+# strcache buffers: 1 (0) / strings = 40 / storage = 362 B / avg = 9 B
+# current buf: size = 8162 B / used = 362 B / count = 40 / avg = 9 B
 
-# strcache performance: lookups = 60 / hit rate = 33%
+# strcache performance: lookups = 59 / hit rate = 32%
 # hash-table stats:
-# Load=40/8192=0%, Rehash=0, Collisions=2/60=3%
-# Finished Make data base on Fri Jul  8 14:22:12 2022
+# Load=40/8192=0%, Rehash=0, Collisions=2/59=3%
+# Finished Make data base on Sun Jul 10 16:07:48 2022
 
  

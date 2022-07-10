@@ -56,6 +56,7 @@ void readInputFile(std::ifstream &inputFile, std::ofstream &outputFile) {
     Hash_BT *hash = new Hash_BT(intAux);
 
     while (inputFile.good()) {
+        strAux = "";
         inputFile >> strAux;
         if (strAux == "ENTREGA")
             sendEmail(inputFile, outputFile, hash);
