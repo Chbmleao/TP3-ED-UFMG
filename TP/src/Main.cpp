@@ -16,7 +16,7 @@ void sendEmail(std::ifstream &inputFile, std::ofstream &outputFile, Hash_BT *has
     }
     emailMessage.pop_back(); // removes the last space
 
-    Email email = Email(emailKey, emailMessage); // creates the email to insert in the hash table
+    Email email = Email(emailKey, userKey, emailMessage); // creates the email to insert in the hash table
 
     int pos = hash->insert(userKey, email);
 

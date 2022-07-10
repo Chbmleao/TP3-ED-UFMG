@@ -8,13 +8,15 @@
 class Email {
     public:
         Email();
-        Email(int key, std::string message);
-        int getKey();
+        Email(int emailKey, int userKey, std::string message);
+        int getEmailKey();
+        int getUserKey();
         std::string getMessage();
         void print();
 
     private:
-        int key;
+        int emailKey;
+        int userKey;
         std::string message;
 
     friend class Node;

@@ -9,6 +9,7 @@ class Hash_BT {
         Email search(int userKey, int emailKey);
         int insert(int userKey, Email email);
         bool remove(int userKey, int emailKey);
+        void print();
 
     private:
         int tableSize;

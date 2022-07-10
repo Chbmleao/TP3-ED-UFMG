@@ -1,17 +1,23 @@
 #include "Email.hpp"
 
 Email::Email() {
-    this->key = -1;
+    this->emailKey = -1;
+    this->userKey = -1;
     this->message = "";
 }
 
-Email::Email(int key, std::string message) {
-    this->key = key;
+Email::Email(int emailKey, int userKey, std::string message) {
+    this->emailKey = emailKey;
+    this->userKey = userKey;
     this->message = message;
 }
 
-int Email::getKey() {
-    return this->key;
+int Email::getEmailKey() {
+    return this->emailKey;
+}
+
+int Email::getUserKey() {
+    return this->userKey;
 }
 
 std::string Email::getMessage() {
@@ -19,6 +25,9 @@ std::string Email::getMessage() {
 }
 
 void Email::print() {
-    std::cout << this->key << " - ";
+    std::cout << "EmailKey: ";
+    std::cout << this->emailKey;
+    std::cout << " UserKey: ";
+    std::cout << this->userKey << " - ";
     std::cout << this->message << std::endl;
 }

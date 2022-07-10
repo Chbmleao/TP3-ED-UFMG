@@ -6,7 +6,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Sun Jul 10 16:07:48 2022
+# Make data base, printed on Sun Jul 10 17:03:16 2022
 
 # Variables
 
@@ -61,7 +61,7 @@ LSCOLORS = Gxfxcxdxbxegedabagacad
 # environment
 ELECTRON_RUN_AS_NODE = 1
 # environment
-VSCODE_IPC_HOOK_CLI = /tmp/vscode-ipc-9bce4b75-ae0c-475e-aa82-1d02e0266816.sock
+VSCODE_IPC_HOOK_CLI = /tmp/vscode-ipc-a39e8226-62b4-4484-9011-e1ec8587729b.sock
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
 # environment
@@ -75,7 +75,7 @@ PWD = /home/carlos/TPS/TP3/TP
 # default
 .LOADED := 
 # environment
-WSL_INTEROP = /run/WSL/509_interop
+WSL_INTEROP = /run/WSL/3640_interop
 # environment
 VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
 # environment
@@ -221,7 +221,7 @@ perf: bin//tp3.exe
 obj/Main.o: src/Main.cpp
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'Main'
-#  Last modified 2022-07-08 16:38:26.4816409
+#  Last modified 2022-07-10 16:21:13.8436207
 #  File has been updated.
 #  Needs to be updated (-q is set).
 # automatic
@@ -277,7 +277,6 @@ build: obj/memlog.o obj/Main.o obj/Hash.o obj/Node.o obj/BinaryTree.o obj/Email.
 #  File has been updated.
 #  Needs to be updated (-q is set).
 # variable set hash-table stats:
- 
 # Load=0/32=0%, Rehash=0, Collisions=0/6=0%
 #  recipe to execute (from 'Makefile', line 60):
 	$(CC) $(CXXFLAGS) -o $(BIN_FOLDER)$(TARGET) $(OBJ)
@@ -304,12 +303,13 @@ mem: bin//tp3.exe
 # Not a target:
 src/Main.cpp:
 #  Implicit rule search has been done.
-#  Last modified 2022-07-08 17:26:53.7516409
+#  Last modified 2022-07-10 16:54:51.3336207
 #  File has been updated.
 #  Successfully updated.
 
 run: bin//tp3.exe
 #  Implicit rule search has not been done.
+ 
 #  Modification time never checked.
 #  File has not been updated.
 #  recipe to execute (from 'Makefile', line 66):
@@ -350,6 +350,6 @@ obj/Hash.o:
 # strcache performance: lookups = 59 / hit rate = 32%
 # hash-table stats:
 # Load=40/8192=0%, Rehash=0, Collisions=2/59=3%
-# Finished Make data base on Sun Jul 10 16:07:48 2022
+# Finished Make data base on Sun Jul 10 17:03:16 2022
 
  

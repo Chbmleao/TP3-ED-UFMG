@@ -14,7 +14,7 @@ Email Hash_BT::search(int userKey, int emailKey) {
     Email email;
     pos = this->hash(userKey);
 
-    email = this->table[pos].search(emailKey);
+    email = this->table[pos].search(emailKey, userKey);
     return email;
 }
 
@@ -22,7 +22,7 @@ int Hash_BT::insert(int userKey, Email email) {
     int pos;
     Email aux;
 
-    aux = this->search(userKey, email.getKey());
+    aux = this->search(userKey, email.getEmailKey());
     erroAssert(aux.getMessage().empty(), "Email already exists.");
 
     pos = this->hash(userKey);
@@ -35,5 +35,11 @@ bool Hash_BT::remove(int userKey, int emailKey) {
     int pos;
 
     pos = this->hash(userKey);
-    return this->table[pos].remove(emailKey);
+    return this->table[pos].remove(emailKey, userKey);
+}
+
+void Hash_BT::print() {
+    for (int i = 0; i < this->tableSize; i++) {
+        this->table->printInOrder();
+    }   
 }

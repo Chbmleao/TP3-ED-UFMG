@@ -16,7 +16,7 @@ void BinaryTree::insertRecursive(Node* &currentNode, Email email) {
     if (currentNode == NULL) 
         currentNode = new Node(email);
     else {
-        if (email.getKey() < currentNode->email.getKey())
+        if (email.getEmailKey() < currentNode->email.getEmailKey())
             this->insertRecursive(currentNode->left, email);
         else
             this->insertRecursive(currentNode->right, email);
@@ -49,40 +49,44 @@ void BinaryTree::cleanRecursive(Node *currentNode) {
     }
 }
 
-Email BinaryTree::search(int key) {
-    return this->searchRecursive(this->root, key);
+Email BinaryTree::search(int emailKey, int userKey) {
+    return this->searchRecursive(this->root, emailKey, userKey);
 }
 
-Email BinaryTree::searchRecursive(Node* currentNode, int key) {
+Email BinaryTree::searchRecursive(Node* currentNode, int emailKey, int userKey) {
     Email aux = Email();
 
     if (currentNode == NULL) 
         return aux;
     
-    if (key < currentNode->email.getKey())
-        return this->searchRecursive(currentNode->left, key);
-    else if (key > currentNode->email.getKey())
-        return this->searchRecursive(currentNode->right, key);
-    else
+    // currentNode->email.print(); 
+
+    if (emailKey < currentNode->email.getEmailKey())
+        return this->searchRecursive(currentNode->left, emailKey, userKey);
+    else if (emailKey > currentNode->email.getEmailKey())
+        return this->searchRecursive(currentNode->right, emailKey, userKey);
+    else if (userKey == currentNode->email.getUserKey())
         return currentNode->email;
+    else
+        return aux;
 }
 
-bool BinaryTree::remove(int key) {
-    return this->removeRecursive(this->root, key);
+bool BinaryTree::remove(int emailKey, int userKey) {
+    return this->removeRecursive(this->root, emailKey, userKey);
 }
 
-bool BinaryTree::removeRecursive(Node* &currentNode, int key) {
+bool BinaryTree::removeRecursive(Node* &currentNode, int emailKey, int userKey) {
     Node *aux;
 
     if (currentNode == NULL) {
         avisoAssert(currentNode == NULL, "Email does not exist");
         return false;
     }
-    if (key < currentNode->email.getKey())
-        return removeRecursive(currentNode->left, key);
-    else if (key > currentNode->email.getKey())
-        return removeRecursive(currentNode->right, key);
-    else {
+    if (emailKey < currentNode->email.getEmailKey())
+        return removeRecursive(currentNode->left, emailKey, userKey);
+    else if (emailKey > currentNode->email.getEmailKey())
+        return removeRecursive(currentNode->right, emailKey, userKey);
+    else if (userKey == currentNode->email.getUserKey()){
         if (currentNode->right == NULL) {
             aux = currentNode;
             currentNode = currentNode->left;
@@ -97,6 +101,8 @@ bool BinaryTree::removeRecursive(Node* &currentNode, int key) {
             this->previous(currentNode, currentNode->left);
         return true;
     }
+    else
+        return false;
 }
 
 void BinaryTree::previous(Node* q, Node* &r) {
