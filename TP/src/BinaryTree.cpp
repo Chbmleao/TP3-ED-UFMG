@@ -58,8 +58,6 @@ Email BinaryTree::searchRecursive(Node* currentNode, int emailKey, int userKey) 
 
     if (currentNode == NULL) 
         return aux;
-    
-    // currentNode->email.print(); 
 
     if (emailKey < currentNode->email.getEmailKey())
         return this->searchRecursive(currentNode->left, emailKey, userKey);
