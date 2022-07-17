@@ -1,5 +1,74 @@
-#include "Hash.hpp"
 #include <fstream>
+#include <getopt.h>
+#include <string.h>
+#include "Hash.hpp"
+#include "memlog.hpp"
+
+typedef struct opt{
+    std::string logName;
+    int regmem;
+    std::string inputFile;
+    std::string outputFile;
+} opt_tipo;
+
+// print the use options
+void use(){
+    fprintf(stderr,"Main\n");
+    fprintf(stderr,"\t-i entrada.txt \t(arquivo de entrada)\n");
+    fprintf(stderr,"\t-o saida.txt \t(arquivo de entrada)\n");
+    fprintf(stderr,"\t-p log.out\t(registro de desempenho)\n");
+    fprintf(stderr,"\t-l \t\t(padrao de acesso e localidade)\n");
+}
+
+// read command line options and initialize variables
+void parse_args(int argc,char ** argv, opt_tipo * opt){
+    // external variables
+    extern char * optarg;
+    // auxiliar variable
+    int c;
+
+    // global variables inicialization
+    opt->regmem = 0;
+    opt->logName[0] = 0;
+    opt->inputFile = "entrada.txt";
+    opt->outputFile = "saida.txt";
+    
+    // getopt - letter indicates option, : indicates parameter
+    while ((c = getopt(argc, argv, "i:o:p:lh")) != EOF) {
+        switch(c) {
+            case 'i':
+                opt->inputFile = std::string(optarg);
+                break;
+            case 'o':
+                opt->outputFile = std::string(optarg);
+                break;
+            case 'p': 
+                opt->logName = std::string(optarg);
+                break;
+            case 'l': 
+                opt->regmem = 1;
+                break;
+            case 'h':
+            default:
+                use();
+                exit(1);
+        }
+    }
+
+    // verify the options consistency
+    if (opt->inputFile.empty()) {
+        opt->inputFile = "entrada.txt";
+        avisoAssert(1, "Input File was not passed as parameter, 'entrada.txt' file will be used.");
+    }  
+    if (opt->outputFile.empty()) {
+        opt->outputFile = "saida.txt";
+        avisoAssert(1, "Output File was not passed as parameter, 'entrada.txt' file will be used.");
+    }
+    if (opt->logName.empty()) {
+        opt->logName = "/tmp/tp2log.out";
+        avisoAssert(1, "Log File Name was not passed as parameter, '/tmp/tp2log.out' value will be used.");
+    }
+}
 
 void sendEmail(std::ifstream &inputFile, std::ofstream &outputFile, Hash_BT *hash) {
     std::string word, emailMessage;
@@ -67,10 +136,24 @@ void readInputFile(std::ifstream &inputFile, std::ofstream &outputFile) {
     }
 }
 
-int main(int argc, char const *argv[]) {
+int main(int argc, char **argv) {
+    opt_tipo opt;
+    // evaluate command line
+    parse_args(argc, argv, &opt);
 
-    std::ifstream inputFile("entrada.txt");
-    std::ofstream outputFile("saida.txt");
+    // access log initialization
+    char logName[opt.logName.size()];
+    strcpy(logName, opt.logName.c_str());
+    iniciaMemLog(logName);
+
+    // activate or not the access log
+    if (opt.regmem)
+        ativaMemLog();
+    else   
+        desativaMemLog();
+
+    std::ifstream inputFile(opt.inputFile);
+    std::ofstream outputFile(opt.outputFile);
 
     if (inputFile.is_open() && outputFile.is_open()) {
         readInputFile(inputFile, outputFile);

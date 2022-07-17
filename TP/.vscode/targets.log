@@ -5,8 +5,9 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
+ 
 
-# Make data base, printed on Sun Jul 10 17:03:16 2022
+# Make data base, printed on Sun Jul 17 17:58:54 2022
 
 # Variables
 
@@ -15,7 +16,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # automatic
 ?F = $(notdir $?)
 # environment
-WSLENV = VSCODE_WSL_EXT_LOCATION/up
+WSLENV = VSCODE_WSL_EXT_LOCATION/up:VSCODE_SERVER_TAR/up
 # default
 .SHELLFLAGS := -c
 # makefile (from 'Makefile', line 38)
@@ -41,7 +42,7 @@ SHELL = /bin/sh
 # environment
 VSCODE_NLS_CONFIG = {"locale":"en","availableLanguages":{}}
 # environment
-_ = /home/carlos/.vscode-server/bin/92d25e35d9bf1a6b16f7d0758f25d48ace11e5b9/node
+_ = /home/carlos/.vscode-server/bin/b06ae3b2d2dbfe28bca3134cc6be65935cdfea6a/node
 # makefile (from 'Makefile', line 1)
 MAKEFILE_LIST :=  Makefile
 # makefile (from 'Makefile', line 40)
@@ -55,13 +56,15 @@ VSCODE_CWD = /mnt/d/Microsoft VS Code
 # default
 MAKE_HOST := x86_64-pc-linux-gnu
 # environment
-PATH = /home/carlos/.vscode-server/bin/92d25e35d9bf1a6b16f7d0758f25d48ace11e5b9/bin/remote-cli:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Python310/Scripts/:/mnt/c/Python310/:/mnt/d/anaconda3:/mnt/d/anaconda3/Library/mingw-w64/bin:/mnt/d/anaconda3/Library/usr/bin:/mnt/d/anaconda3/Library/bin:/mnt/d/anaconda3/Scripts:/mnt/c/MinGW/bin:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:/mnt/c/Windows/System32/OpenSSH/:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA NvDLISR:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/FFmpeg:/mnt/c/Program Files/nodejs/:/mnt/c/ProgramData/chocolatey/bin:/mnt/c/Program Files/Go/bin:/mnt/c/Users/Micro/AppData/Local/Microsoft/WindowsApps:/mnt/d/Microsoft VS Code/bin:/mnt/c/Users/Micro/AppData/Roaming/npm:/mnt/c/Users/Micro/go/bin:/mnt/c/Program Files/PostgreSQL/14/bin
+PATH = /home/carlos/.vscode-server/bin/b06ae3b2d2dbfe28bca3134cc6be65935cdfea6a/bin/remote-cli:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Python310/Scripts/:/mnt/c/Python310/:/mnt/d/anaconda3:/mnt/d/anaconda3/Library/mingw-w64/bin:/mnt/d/anaconda3/Library/usr/bin:/mnt/d/anaconda3/Library/bin:/mnt/d/anaconda3/Scripts:/mnt/c/MinGW/bin:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:/mnt/c/Windows/System32/OpenSSH/:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA NvDLISR:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/FFmpeg:/mnt/c/Program Files/nodejs/:/mnt/c/ProgramData/chocolatey/bin:/mnt/c/Program Files/Go/bin:/mnt/c/Users/Micro/AppData/Local/Microsoft/WindowsApps:/mnt/d/Microsoft VS Code/bin:/mnt/c/Users/Micro/AppData/Roaming/npm:/mnt/c/Users/Micro/go/bin:/mnt/c/Program Files/PostgreSQL/14/bin
 # environment
 LSCOLORS = Gxfxcxdxbxegedabagacad
 # environment
 ELECTRON_RUN_AS_NODE = 1
 # environment
-VSCODE_IPC_HOOK_CLI = /tmp/vscode-ipc-a39e8226-62b4-4484-9011-e1ec8587729b.sock
+VSCODE_IPC_HOOK_CLI = /tmp/vscode-ipc-f688a832-a9e1-4d38-9544-d4817df95762.sock
+# environment
+VSCODE_SERVER_TAR = /mnt/c/Users/Micro/AppData/Local/Temp/vscode-remote-wsl/b06ae3b2d2dbfe28bca3134cc6be65935cdfea6a/vscode-server-stable-linux-x64.tar.gz
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
 # environment
@@ -75,7 +78,7 @@ PWD = /home/carlos/TPS/TP3/TP
 # default
 .LOADED := 
 # environment
-WSL_INTEROP = /run/WSL/3640_interop
+WSL_INTEROP = /run/WSL/25_interop
 # environment
 VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
 # environment
@@ -83,7 +86,7 @@ HOME = /home/carlos
 # environment
 LOGNAME = carlos
 # environment
-APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
 # environment
 ZSH = /home/carlos/.oh-my-zsh
 # environment
@@ -169,7 +172,7 @@ TERM = xterm-256color
 # environment
 WSL_DISTRO_NAME = Ubuntu-20.04
 # variable set hash-table stats:
-# Load=79/1024=8%, Rehash=0, Collisions=9/123=7%
+# Load=80/1024=8%, Rehash=0, Collisions=10/130=8%
 
 # Pattern-specific Variable Values
 
@@ -177,11 +180,11 @@ WSL_DISTRO_NAME = Ubuntu-20.04
 
 # Directories
 
-# . (device 2064, inode 57183): 11 files, no impossibilities.
+# . (device 2064, inode 57183): 10 files, no impossibilities.
 # ./src (device 2064, inode 93606): 8 files, no impossibilities.
 # src (device 2064, inode 93606): 8 files, no impossibilities.
 
-# 27 files, no impossibilities in 3 directories.
+# 26 files, no impossibilities in 3 directories.
 
 # Implicit Rules
 
@@ -200,7 +203,7 @@ all: build run
 #  File has been updated.
 #  Needs to be updated (-q is set).
 # variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/6=0%
+# Load=0/32=0%, Rehash=0, Collisions=0/12=0%
 
 perf: bin//tp3.exe
 #  Implicit rule search has not been done.
@@ -221,35 +224,27 @@ perf: bin//tp3.exe
 obj/Main.o: src/Main.cpp
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'Main'
-#  Last modified 2022-07-10 16:21:13.8436207
+#  Last modified 2022-07-17 17:58:29.3635883
 #  File has been updated.
-#  Needs to be updated (-q is set).
-# automatic
-# @ := obj/Main.o
-# automatic
-# % := 
-# automatic
-# * := Main
-# automatic
-# + := src/Main.cpp
-# automatic
-# | := 
-# automatic
-# < := src/Main.cpp
-# automatic
-# ^ := src/Main.cpp
-# automatic
-# ? := src/Main.cpp
-# variable set hash-table stats:
-# Load=8/32=25%, Rehash=0, Collisions=1/16=6%
+#  Successfully updated.
 #  recipe to execute (from 'Makefile', line 63):
 	$(CC) $(CXXFLAGS) -c $< -o $@ -I$(INCLUDE_FOLDER)
 
 # Not a target:
-obj/BinaryTree.o:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
+src/Email.cpp:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-10 17:06:39.7136207
+#  File has been updated.
+#  Successfully updated.
+
+obj/BinaryTree.o: src/BinaryTree.cpp
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'BinaryTree'
+#  Last modified 2022-07-17 13:36:48.7135883
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 63):
+	$(CC) $(CXXFLAGS) -c $< -o $@ -I$(INCLUDE_FOLDER)
 
 # Not a target:
 bin//tp3.exe:
@@ -258,9 +253,15 @@ bin//tp3.exe:
 #  File has not been updated.
 
 # Not a target:
+.SUFFIXES:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-07-06 18:03:56.3689645
+#  Last modified 2022-07-17 17:58:48.5235883
 #  File has been updated.
 #  Successfully updated.
 
@@ -273,19 +274,47 @@ src/memlog.cpp:
 
 build: obj/memlog.o obj/Main.o obj/Hash.o obj/Node.o obj/BinaryTree.o obj/Email.o
 #  Implicit rule search has not been done.
+#  Implicit/static pattern stem: ''
 #  File does not exist.
 #  File has been updated.
 #  Needs to be updated (-q is set).
+# automatic
+# @ := build
+# automatic
+# % := 
+ 
+# automatic
+# * := 
+# automatic
+# + := obj/memlog.o obj/Main.o obj/Hash.o obj/Node.o obj/BinaryTree.o obj/Email.o
+# automatic
+# | := 
+# automatic
+# < := obj/memlog.o
+# automatic
+# ^ := obj/memlog.o obj/Main.o obj/Hash.o obj/Node.o obj/BinaryTree.o obj/Email.o
+# automatic
+# ? := obj/memlog.o obj/Main.o obj/Hash.o obj/Node.o obj/BinaryTree.o obj/Email.o
 # variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/6=0%
+# Load=8/32=25%, Rehash=0, Collisions=3/20=15%
 #  recipe to execute (from 'Makefile', line 60):
 	$(CC) $(CXXFLAGS) -o $(BIN_FOLDER)$(TARGET) $(OBJ)
 
+obj/Node.o: src/Node.cpp
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'Node'
+#  Last modified 2022-07-10 17:24:02.2236207
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 63):
+	$(CC) $(CXXFLAGS) -c $< -o $@ -I$(INCLUDE_FOLDER)
+
 # Not a target:
-obj/Node.o:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
+src/Hash.cpp:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-10 17:13:02.4536207
+#  File has been updated.
+#  Successfully updated.
 
 mem: bin//tp3.exe
 #  Implicit rule search has not been done.
@@ -303,23 +332,32 @@ mem: bin//tp3.exe
 # Not a target:
 src/Main.cpp:
 #  Implicit rule search has been done.
-#  Last modified 2022-07-10 16:54:51.3336207
+#  Last modified 2022-07-17 17:58:25.7635883
 #  File has been updated.
 #  Successfully updated.
 
 run: bin//tp3.exe
 #  Implicit rule search has not been done.
- 
 #  Modification time never checked.
 #  File has not been updated.
 #  recipe to execute (from 'Makefile', line 66):
-	$(EXE) -I entrada.txt -O saida.txt -m 5 -s 10 -p /tmp/testlog.out
+	$(EXE) -i entrada.txt -o saida.txt -p /tmp/runlog.out
+
+obj/Email.o: src/Email.cpp
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'Email'
+#  Last modified 2022-07-10 17:07:10.9736207
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 63):
+	$(CC) $(CXXFLAGS) -c $< -o $@ -I$(INCLUDE_FOLDER)
 
 # Not a target:
-obj/Email.o:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
+src/BinaryTree.cpp:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-10 18:21:05.1336207
+#  File has been updated.
+#  Successfully updated.
 
 obj/memlog.o: src/memlog.cpp
 #  Implicit rule search has been done.
@@ -331,25 +369,35 @@ obj/memlog.o: src/memlog.cpp
 	$(CC) $(CXXFLAGS) -c $< -o $@ -I$(INCLUDE_FOLDER)
 
 # Not a target:
-obj/Hash.o:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
+src/Node.cpp:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-10 17:23:58.7336207
+#  File has been updated.
+#  Successfully updated.
+
+obj/Hash.o: src/Hash.cpp
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'Hash'
+#  Last modified 2022-07-10 17:13:04.9836207
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 63):
+	$(CC) $(CXXFLAGS) -c $< -o $@ -I$(INCLUDE_FOLDER)
 
 # files hash-table stats:
-# Load=17/1024=2%, Rehash=0, Collisions=0/47=0%
+# Load=21/1024=2%, Rehash=0, Collisions=0/64=0%
 # VPATH Search Paths
 
 # No 'vpath' search paths.
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 40 / storage = 362 B / avg = 9 B
-# current buf: size = 8162 B / used = 362 B / count = 40 / avg = 9 B
+# strcache buffers: 1 (0) / strings = 47 / storage = 438 B / avg = 9 B
+# current buf: size = 8162 B / used = 438 B / count = 47 / avg = 9 B
 
-# strcache performance: lookups = 59 / hit rate = 32%
+# strcache performance: lookups = 71 / hit rate = 33%
 # hash-table stats:
-# Load=40/8192=0%, Rehash=0, Collisions=2/59=3%
-# Finished Make data base on Sun Jul 10 17:03:16 2022
+# Load=47/8192=1%, Rehash=0, Collisions=2/71=3%
+# Finished Make data base on Sun Jul 17 17:58:54 2022
 
  
