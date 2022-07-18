@@ -6,8 +6,8 @@
 class Hash_BT {
     public:
         Hash_BT(int tableSize);
-        Email search(int userKey, int emailKey);
-        int insert(int userKey, Email email);
+        Email* search(int userKey, int emailKey);
+        int insert(int userKey, Email* email);
         bool remove(int userKey, int emailKey);
         void print();
 

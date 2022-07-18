@@ -14,27 +14,30 @@ int Hash_BT::hash(int key) {
     return key % this->tableSize;
 }
 
-Email Hash_BT::search(int userKey, int emailKey) {
+// search an email in the tree and returns it
+// if the search fails, returns an empty email
+Email* Hash_BT::search(int userKey, int emailKey) {
     erroAssert(userKey >= 0, "User key must be a positive number.");
     erroAssert(emailKey >= 0, "Email key must be a positive number.");
 
     int pos;
-    Email email;
+    Email* email;
     pos = this->hash(userKey);
 
     email = this->table[pos].search(emailKey, userKey);
     return email;
 }
 
-int Hash_BT::insert(int userKey, Email email) {
+// inserts an email in the hash table
+int Hash_BT::insert(int userKey, Email* email) {
     erroAssert(userKey >= 0, "User key must be a positive number.");
-    erroAssert(email.getEmailKey() >= 0, "Email key must be a positive number.");
+    erroAssert(email->getEmailKey() >= 0, "Email key must be a positive number.");
 
     int pos;
-    Email aux;
+    Email* aux;
 
-    aux = this->search(userKey, email.getEmailKey());
-    erroAssert(aux.getMessage().empty(), "Email already exists.");
+    aux = this->search(userKey, email->getEmailKey());
+    erroAssert(aux->getMessage().empty(), "Email already exists.");
 
     pos = this->hash(userKey);
     this->table[pos].insert(email);
@@ -42,6 +45,7 @@ int Hash_BT::insert(int userKey, Email email) {
     return pos;
 }
 
+// remove an email in the tree and returns true if suceeded or false if failed
 bool Hash_BT::remove(int userKey, int emailKey) {
     avisoAssert(userKey >= 0, "User key must be a positive number.");
     avisoAssert(emailKey >= 0, "Email key must be a positive number.");
@@ -52,6 +56,7 @@ bool Hash_BT::remove(int userKey, int emailKey) {
     return this->table[pos].remove(emailKey, userKey);
 }
 
+// print all the e-mails in the hash table
 void Hash_BT::print() {
     for (int i = 0; i < this->tableSize; i++) {
         this->table->printInOrder();

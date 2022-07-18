@@ -6,10 +6,10 @@
 class Node {
     public:
         Node();
-        Node(Email email);
+        Node(Email *email);
 
     private:
-        Email email;
+        Email *email;
         Node *left;
         Node *right;
 

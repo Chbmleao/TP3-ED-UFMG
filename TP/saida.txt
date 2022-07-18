@@ -1,3 +1,90 @@
-OK: MENSAGEM 15 PARA 1 ARMAZENADA EM 1
-OK: MENSAGEM 16 PARA 0 ARMAZENADA EM 0
+OK: MENSAGEM 23 PARA 0 ARMAZENADA EM 0
+OK: MENSAGEM 0 PARA 0 ARMAZENADA EM 0
+OK: MENSAGEM 1 PARA 0 ARMAZENADA EM 0
+OK: MENSAGEM 12 PARA 0 ARMAZENADA EM 0
 OK: MENSAGEM 17 PARA 0 ARMAZENADA EM 0
+OK: MENSAGEM 22 PARA 0 ARMAZENADA EM 0
+OK: MENSAGEM 11 PARA 0 ARMAZENADA EM 0
+OK: MENSAGEM 19 PARA 0 ARMAZENADA EM 0
+OK: MENSAGEM 9 PARA 0 ARMAZENADA EM 0
+OK: MENSAGEM 21 PARA 0 ARMAZENADA EM 0
+OK: MENSAGEM 25 PARA 2 ARMAZENADA EM 2
+OK: MENSAGEM 28 PARA 2 ARMAZENADA EM 2
+OK: MENSAGEM 20 PARA 2 ARMAZENADA EM 2
+OK: MENSAGEM 5 PARA 2 ARMAZENADA EM 2
+OK: MENSAGEM 29 PARA 2 ARMAZENADA EM 2
+OK: MENSAGEM 15 PARA 2 ARMAZENADA EM 2
+OK: MENSAGEM 26 PARA 2 ARMAZENADA EM 2
+OK: MENSAGEM 18 PARA 2 ARMAZENADA EM 2
+OK: MENSAGEM 8 PARA 2 ARMAZENADA EM 2
+OK: MENSAGEM 14 PARA 2 ARMAZENADA EM 2
+OK: MENSAGEM 27 PARA 1 ARMAZENADA EM 1
+OK: MENSAGEM 7 PARA 1 ARMAZENADA EM 1
+OK: MENSAGEM 13 PARA 1 ARMAZENADA EM 1
+OK: MENSAGEM 6 PARA 1 ARMAZENADA EM 1
+OK: MENSAGEM 2 PARA 1 ARMAZENADA EM 1
+OK: MENSAGEM 10 PARA 1 ARMAZENADA EM 1
+OK: MENSAGEM 3 PARA 1 ARMAZENADA EM 1
+OK: MENSAGEM 4 PARA 1 ARMAZENADA EM 1
+OK: MENSAGEM 16 PARA 1 ARMAZENADA EM 1
+OK: MENSAGEM 24 PARA 1 ARMAZENADA EM 1
+CONSULTA 0 23: Bom dia, meu amigo! Tudo bom? Eu estou muito muito bem, obrigado por me perguntar.
+CONSULTA 0 0: Bom dia, meu amigo! Tudo bom? Eu estou muito muito bem, obrigado por me perguntar.
+CONSULTA 0 1: Bom dia, meu amigo! Tudo bom? Eu estou muito muito bem, obrigado por me perguntar.
+CONSULTA 0 12: Bom dia, meu amigo! Tudo bom? Eu estou muito muito bem, obrigado por me perguntar.
+CONSULTA 0 17: Bom dia, meu amigo! Tudo bom? Eu estou muito muito bem, obrigado por me perguntar.
+CONSULTA 0 22: Bom dia, meu amigo! Tudo bom? Eu estou muito muito bem, obrigado por me perguntar.
+CONSULTA 0 11: Bom dia, meu amigo! Tudo bom? Eu estou muito muito bem, obrigado por me perguntar.
+CONSULTA 0 19: Bom dia, meu amigo! Tudo bom? Eu estou muito muito bem, obrigado por me perguntar.
+CONSULTA 0 9: Bom dia, meu amigo! Tudo bom? Eu estou muito muito bem, obrigado por me perguntar.
+CONSULTA 0 21: Bom dia, meu amigo! Tudo bom? Eu estou muito muito bem, obrigado por me perguntar.
+CONSULTA 2 25: Bom dia, meu amigo! Tudo bom? Eu estou muito muito bem, obrigado por me perguntar.
+CONSULTA 2 28: Bom dia, meu amigo! Tudo bom? Eu estou muito muito bem, obrigado por me perguntar.
+CONSULTA 2 20: Bom dia, meu amigo! Tudo bom? Eu estou muito muito bem, obrigado por me perguntar.
+CONSULTA 2 5: Bom dia, meu amigo! Tudo bom? Eu estou muito muito bem, obrigado por me perguntar.
+CONSULTA 2 29: Bom dia, meu amigo! Tudo bom? Eu estou muito muito bem, obrigado por me perguntar.
+CONSULTA 2 15: Bom dia, meu amigo! Tudo bom? Eu estou muito muito bem, obrigado por me perguntar.
+CONSULTA 2 26: Bom dia, meu amigo! Tudo bom? Eu estou muito muito bem, obrigado por me perguntar.
+CONSULTA 2 18: Bom dia, meu amigo! Tudo bom? Eu estou muito muito bem, obrigado por me perguntar.
+CONSULTA 2 8: Bom dia, meu amigo! Tudo bom? Eu estou muito muito bem, obrigado por me perguntar.
+CONSULTA 2 14: Bom dia, meu amigo! Tudo bom? Eu estou muito muito bem, obrigado por me perguntar.
+CONSULTA 1 27: Bom dia, meu amigo! Tudo bom? Eu estou muito muito bem, obrigado por me perguntar.
+CONSULTA 1 7: Bom dia, meu amigo! Tudo bom? Eu estou muito muito bem, obrigado por me perguntar.
+CONSULTA 1 13: Bom dia, meu amigo! Tudo bom? Eu estou muito muito bem, obrigado por me perguntar.
+CONSULTA 1 6: Bom dia, meu amigo! Tudo bom? Eu estou muito muito bem, obrigado por me perguntar.
+CONSULTA 1 2: Bom dia, meu amigo! Tudo bom? Eu estou muito muito bem, obrigado por me perguntar.
+CONSULTA 1 10: Bom dia, meu amigo! Tudo bom? Eu estou muito muito bem, obrigado por me perguntar.
+CONSULTA 1 3: Bom dia, meu amigo! Tudo bom? Eu estou muito muito bem, obrigado por me perguntar.
+CONSULTA 1 4: Bom dia, meu amigo! Tudo bom? Eu estou muito muito bem, obrigado por me perguntar.
+CONSULTA 1 16: Bom dia, meu amigo! Tudo bom? Eu estou muito muito bem, obrigado por me perguntar.
+CONSULTA 1 24: Bom dia, meu amigo! Tudo bom? Eu estou muito muito bem, obrigado por me perguntar.
+OK: MENSAGEM APAGADA
+OK: MENSAGEM APAGADA
+OK: MENSAGEM APAGADA
+OK: MENSAGEM APAGADA
+OK: MENSAGEM APAGADA
+OK: MENSAGEM APAGADA
+OK: MENSAGEM APAGADA
+OK: MENSAGEM APAGADA
+OK: MENSAGEM APAGADA
+OK: MENSAGEM APAGADA
+OK: MENSAGEM APAGADA
+OK: MENSAGEM APAGADA
+OK: MENSAGEM APAGADA
+OK: MENSAGEM APAGADA
+OK: MENSAGEM APAGADA
+OK: MENSAGEM APAGADA
+OK: MENSAGEM APAGADA
+OK: MENSAGEM APAGADA
+OK: MENSAGEM APAGADA
+OK: MENSAGEM APAGADA
+OK: MENSAGEM APAGADA
+OK: MENSAGEM APAGADA
+OK: MENSAGEM APAGADA
+OK: MENSAGEM APAGADA
+OK: MENSAGEM APAGADA
+OK: MENSAGEM APAGADA
+OK: MENSAGEM APAGADA
+OK: MENSAGEM APAGADA
+OK: MENSAGEM APAGADA
+OK: MENSAGEM APAGADA

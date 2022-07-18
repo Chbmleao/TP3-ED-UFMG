@@ -87,7 +87,7 @@ void sendEmail(std::ifstream &inputFile, std::ofstream &outputFile, Hash_BT *has
     }
     emailMessage.pop_back(); // removes the last space
 
-    Email email = Email(emailKey, userKey, emailMessage); // creates the email to insert in the hash table
+    Email *email = new Email(emailKey, userKey, emailMessage); // creates the email to insert in the hash table
 
     int pos = hash->insert(userKey, email);
 
@@ -100,12 +100,12 @@ void consultEmail(std::ifstream &inputFile, std::ofstream &outputFile, Hash_BT *
     inputFile >> userKey;
     inputFile >> emailKey;
 
-    Email email = hash->search(userKey, emailKey);
+    Email* email = hash->search(userKey, emailKey);
 
-    if (email.getMessage().empty())
+    if (email->getMessage().empty())
         outputFile << "CONSULTA " << userKey << " " << emailKey << ": MENSAGEM INEXISTENTE" << std::endl;
     else
-        outputFile << "CONSULTA " << userKey << " " << emailKey << ": " << email.getMessage() << std::endl;
+        outputFile << "CONSULTA " << userKey << " " << emailKey << ": " << email->getMessage() << std::endl;
 }
 
 void removeEmail(std::ifstream &inputFile, std::ofstream &outputFile, Hash_BT *hash) {
