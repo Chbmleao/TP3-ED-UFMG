@@ -1,4 +1,5 @@
 #include "Email.hpp"
+#include "memlog.hpp"
 
 Email::Email() {
     this->emailKey = -1;
@@ -12,9 +13,12 @@ Email::Email(int emailKey, int userKey, std::string message) {
     this->emailKey = emailKey;
     this->userKey = userKey;
     this->message = message;
+    
+    ESCREVEMEMLOG((long int) (&(this->emailKey)), sizeof(int), this->userKey);
 }
 
 int Email::getEmailKey() {
+    LEMEMLOG((long int) (&(this->emailKey)), sizeof(int), this->userKey);
     return this->emailKey;
 }
 

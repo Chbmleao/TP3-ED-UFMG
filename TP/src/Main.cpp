@@ -154,6 +154,8 @@ int main(int argc, char **argv) {
     else   
         desativaMemLog();
 
+    defineFaseMemLog(0);
+
     std::ifstream inputFile(opt.inputFile);
     std::ofstream outputFile(opt.outputFile);
 
@@ -163,6 +165,9 @@ int main(int argc, char **argv) {
         erroAssert(inputFile.is_open(), "Could not open the Input File.");
         erroAssert(outputFile.is_open(), "Could not open the output file.");
     }
+
+    inputFile.close();
+    outputFile.close();
 
     finalizaMemLog();
 
