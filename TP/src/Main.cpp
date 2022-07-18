@@ -164,5 +164,7 @@ int main(int argc, char **argv) {
         erroAssert(outputFile.is_open(), "Could not open the output file.");
     }
 
+    finalizaMemLog();
+
     return 0;
 }

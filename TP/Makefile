@@ -42,20 +42,35 @@ ANALISAMEM = ./analisamem/bin/analisamem
 all: build run
 
 mem: $(EXE)
-	$(EXE) -i entrada.txt -o saida.txt -m 3 -s 1 -p /tmp/textlog.out -l
+	$(EXE) -i entrada.txt -o saida.txt -p /tmp/tp3memlog.out -l
 
 perf: $(EXE)
-	$(EXE) -i $(ASSETS)200kText.txt -o $(OUT_FOLDER)200kOut.txt -m 3 -s 20 -p /tmp/200kText.out
-	$(EXE) -i $(ASSETS)400kText.txt -o $(OUT_FOLDER)400kOut.txt -m 3 -s 20 -p /tmp/400kText.out
-	$(EXE) -i $(ASSETS)600kText.txt -o $(OUT_FOLDER)600kOut.txt -m 3 -s 20 -p /tmp/600kText.out
-	$(EXE) -i $(ASSETS)800kText.txt -o $(OUT_FOLDER)800kOut.txt -m 3 -s 20 -p /tmp/800kText.out
-	$(EXE) -i $(ASSETS)1000kText.txt -o $(OUT_FOLDER)1000kOut.txt -m 3 -s 20 -p /tmp/1000kText.out
-	$(EXE) -i $(ASSETS)1200kText.txt -o $(OUT_FOLDER)1200kOut.txt -m 3 -s 20 -p /tmp/1200kText.out
-	$(EXE) -i $(ASSETS)1400kText.txt -o $(OUT_FOLDER)1400kOut.txt -m 3 -s 20 -p /tmp/1400kText.out
-	$(EXE) -i $(ASSETS)1600kText.txt -o $(OUT_FOLDER)1600kOut.txt -m 3 -s 20 -p /tmp/1600kText.out
-	$(EXE) -i $(ASSETS)1800kText.txt -o $(OUT_FOLDER)1800kOut.txt -m 3 -s 20 -p /tmp/1800kText.out
-	$(EXE) -i $(ASSETS)2000kText.txt -o $(OUT_FOLDER)2000kOut.txt -m 3 -s 20 -p /tmp/2000kText.out
-
+	$(EXE) -i $(ASSETS)perf_user_25k.txt -o $(OUT_FOLDER)perf_user_25kOut.txt -p /tmp/perf_user_25k.out
+	$(EXE) -i $(ASSETS)perf_user_50k.txt -o $(OUT_FOLDER)perf_user_50kOut.txt -p /tmp/perf_user_50k.out
+	$(EXE) -i $(ASSETS)perf_user_75k.txt -o $(OUT_FOLDER)perf_user_75kOut.txt -p /tmp/perf_user_75k.out
+	$(EXE) -i $(ASSETS)perf_user_100k.txt -o $(OUT_FOLDER)perf_user_100kOut.txt -p /tmp/perf_user_100k.out
+	$(EXE) -i $(ASSETS)perf_user_125k.txt -o $(OUT_FOLDER)perf_user_125kOut.txt -p /tmp/perf_user_125k.out
+	$(EXE) -i $(ASSETS)perf_user_150k.txt -o $(OUT_FOLDER)perf_user_150kOut.txt -p /tmp/perf_user_150k.out
+	$(EXE) -i $(ASSETS)perf_user_175k.txt -o $(OUT_FOLDER)perf_user_175kOut.txt -p /tmp/perf_user_175k.out
+	$(EXE) -i $(ASSETS)perf_user_200k.txt -o $(OUT_FOLDER)perf_user_200kOut.txt -p /tmp/perf_user_200k.out
+	$(EXE) -i $(ASSETS)perf_user_225k.txt -o $(OUT_FOLDER)perf_user_225kOut.txt -p /tmp/perf_user_225k.out
+	$(EXE) -i $(ASSETS)perf_user_250k.txt -o $(OUT_FOLDER)perf_user_250kOut.txt -p /tmp/perf_user_250k.out
+	$(EXE) -i $(ASSETS)perf_message_50.txt -o $(OUT_FOLDER)perf_message_50Out.txt -p /tmp/perf_message_50.out
+	$(EXE) -i $(ASSETS)perf_message_100.txt -o $(OUT_FOLDER)perf_message_100Out.txt -p /tmp/perf_message_100.out
+	$(EXE) -i $(ASSETS)perf_message_150.txt -o $(OUT_FOLDER)perf_message_150Out.txt -p /tmp/perf_message_150.out
+	$(EXE) -i $(ASSETS)perf_message_200.txt -o $(OUT_FOLDER)perf_message_200Out.txt -p /tmp/perf_message_200.out
+	$(EXE) -i $(ASSETS)perf_message_250.txt -o $(OUT_FOLDER)perf_message_250Out.txt -p /tmp/perf_message_250.out
+	$(EXE) -i $(ASSETS)perf_message_300.txt -o $(OUT_FOLDER)perf_message_300Out.txt -p /tmp/perf_message_300.out
+	$(EXE) -i $(ASSETS)perf_message_350.txt -o $(OUT_FOLDER)perf_message_350Out.txt -p /tmp/perf_message_350.out
+	$(EXE) -i $(ASSETS)perf_message_400.txt -o $(OUT_FOLDER)perf_message_400Out.txt -p /tmp/perf_message_400.out
+	$(EXE) -i $(ASSETS)perf_message_450.txt -o $(OUT_FOLDER)perf_message_450Out.txt -p /tmp/perf_message_450.out
+	$(EXE) -i $(ASSETS)perf_message_500.txt -o $(OUT_FOLDER)perf_message_500Out.txt -p /tmp/perf_message_500.out
+	$(EXE) -i $(ASSETS)perf_size_15.txt -o $(OUT_FOLDER)perf_size_15Out.txt -p /tmp/perf_size_15.out
+	$(EXE) -i $(ASSETS)perf_size_100.txt -o $(OUT_FOLDER)perf_size_100Out.txt -p /tmp/perf_size_100.out
+	$(EXE) -i $(ASSETS)perf_size_200.txt -o $(OUT_FOLDER)perf_size_200Out.txt -p /tmp/perf_size_200.out
+	$(EXE) -i $(ASSETS)perf_frequency_normal.txt -o $(OUT_FOLDER)perf_frequency_normalOut.txt -p /tmp/perf_frequency_normal.out
+	$(EXE) -i $(ASSETS)perf_frequency_random.txt -o $(OUT_FOLDER)perf_frequency_randomOut.txt -p /tmp/perf_frequency_random.out
+	
 build: $(OBJ)
 	$(CC) $(CXXFLAGS) -o $(BIN_FOLDER)$(TARGET) $(OBJ)
 

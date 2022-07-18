@@ -1,11 +1,5 @@
-make --dry-run --always-make --keep-going --print-directory
+make --dry-run --keep-going --print-directory
 make: Entering directory '/home/carlos/TPS/TP3/TP'
-g++ -pg -std=c++11 -g -Wall -c src/memlog.cpp -o obj/memlog.o -I./include/
-g++ -pg -std=c++11 -g -Wall -c src/Main.cpp -o obj/Main.o -I./include/
-g++ -pg -std=c++11 -g -Wall -c src/Hash.cpp -o obj/Hash.o -I./include/
-g++ -pg -std=c++11 -g -Wall -c src/Node.cpp -o obj/Node.o -I./include/
-g++ -pg -std=c++11 -g -Wall -c src/BinaryTree.cpp -o obj/BinaryTree.o -I./include/
-g++ -pg -std=c++11 -g -Wall -c src/Email.cpp -o obj/Email.o -I./include/
 g++ -pg -std=c++11 -g -Wall -o ./bin/tp3.exe  ./obj/memlog.o  ./obj/Main.o  ./obj/Hash.o  ./obj/Node.o  ./obj/BinaryTree.o  ./obj/Email.o
 ./bin//tp3.exe -i entrada.txt -o saida.txt -p /tmp/runlog.out
 make: Leaving directory '/home/carlos/TPS/TP3/TP'
