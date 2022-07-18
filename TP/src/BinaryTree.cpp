@@ -9,6 +9,7 @@ BinaryTree::~BinaryTree() {
 }
 
 void BinaryTree::insert(Email email) {
+    erroAssert(email.getEmailKey() >= 0, "Email key must be a positive number.");
     this->insertRecursive(this->root, email);
 }
 
@@ -24,7 +25,7 @@ void BinaryTree::insertRecursive(Node* &currentNode, Email email) {
 }
 
 void BinaryTree::printInOrder() {
-    erroAssert(this->root != NULL, "The tree is empty!");
+    avisoAssert(this->root != NULL, "The tree is empty!");
     this->printInOrderRecursive(this->root);
 }
 
@@ -37,6 +38,7 @@ void BinaryTree::printInOrderRecursive(Node *currentNode) {
 }
 
 void BinaryTree::clean() {
+    avisoAssert(this->root != NULL, "The tree is already empty!");
     this->cleanRecursive(this->root);
     this->root = NULL;
 }
@@ -50,6 +52,8 @@ void BinaryTree::cleanRecursive(Node *currentNode) {
 }
 
 Email BinaryTree::search(int emailKey, int userKey) {
+    erroAssert(userKey >= 0, "User key must be a positive number.");
+    erroAssert(emailKey >= 0, "Email key must be a positive number.");
     return this->searchRecursive(this->root, emailKey, userKey);
 }
 
@@ -70,6 +74,8 @@ Email BinaryTree::searchRecursive(Node* currentNode, int emailKey, int userKey) 
 }
 
 bool BinaryTree::remove(int emailKey, int userKey) {
+    avisoAssert(userKey >= 0, "User key must be a positive number.");
+    avisoAssert(emailKey >= 0, "Email key must be a positive number.");
     return this->removeRecursive(this->root, emailKey, userKey);
 }
 

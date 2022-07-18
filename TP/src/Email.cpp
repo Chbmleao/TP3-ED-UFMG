@@ -7,6 +7,8 @@ Email::Email() {
 }
 
 Email::Email(int emailKey, int userKey, std::string message) {
+    erroAssert(userKey >= 0, "User key must be a positive number.");
+    erroAssert(emailKey >= 0, "Email key must be a positive number.");
     this->emailKey = emailKey;
     this->userKey = userKey;
     this->message = message;

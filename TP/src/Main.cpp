@@ -62,11 +62,11 @@ void parse_args(int argc,char ** argv, opt_tipo * opt){
     }  
     if (opt->outputFile.empty()) {
         opt->outputFile = "saida.txt";
-        avisoAssert(1, "Output File was not passed as parameter, 'entrada.txt' file will be used.");
+        avisoAssert(1, "Output File was not passed as parameter, 'saida.txt' file will be used.");
     }
     if (opt->logName.empty()) {
-        opt->logName = "/tmp/tp2log.out";
-        avisoAssert(1, "Log File Name was not passed as parameter, '/tmp/tp2log.out' value will be used.");
+        opt->logName = "/tmp/tp3log.out";
+        avisoAssert(1, "Log File Name was not passed as parameter, '/tmp/tp3log.out' value will be used.");
     }
 }
 
@@ -77,6 +77,8 @@ void sendEmail(std::ifstream &inputFile, std::ofstream &outputFile, Hash_BT *has
     inputFile >> userKey;
     inputFile >> emailKey;
     inputFile >> messageSize;
+
+    erroAssert(messageSize <= 200, "The message has more than 200 words.");
 
     for (int i = 0; i < messageSize; i++) {
         inputFile >> word;
